@@ -1,13 +1,80 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #333;
+  color: #fff;
+  font-family: monospace;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  margin-top: 50px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.listParent {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: #272626;
+  border-radius: 5px;
+}
+
+.formContainer{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.formControl {
+  width: 80%;
+  border: 1px solid rgb(235, 153, 1);
+  border-radius: 20px;
+  padding: 0 20px;
+  background-color: transparent;
+  color: rgb(235, 153, 1);
+}
+
+.formControl:focus {
+  border: 1px solid #fff;
+  outline: none;
+}
+
+
+.btn {
+  min-width: 100px;
+  max-width: 150px;
+  background-color: rgb(235, 153, 1);
+  color: #fff;
+  border-radius: 20px;
+}
+
+.editBtn {
+  background-color: darkgreen;
+}
+
+.deleteBtn {
+  margin-left: 5px;
+  background-color: rgb(177, 25, 25);
+}
+
+.btn:hover {
+  background-color: transparent;
+  color:rgb(201, 130, 0);
+  border: 1px solid rgb(201, 130, 0);   
+}
+
+.nothing {
+  height: 50vh;
+  color: lightgray;
+  align-items: center;
+  align-content: center;
+  opacity: 0.3;
+  text-align: center;
+  background-color: #272626;
+  border-radius: 5px;
 }

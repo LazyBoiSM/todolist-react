@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Context from "./Context";
+import Form from "./Form";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  const [text, setText] = useState("");
+  const [itemList, setItemList] = useState([]);
+  const [editMode, setEditMode] = useState(false);
+  const [editId, setEditId] = useState("");
+  return ( 
+    <Context.Provider value={{text, setText, itemList, setItemList,editId, setEditId, editMode, setEditMode}}>
+      <Form/>
+    </Context.Provider>
   );
 }
 
